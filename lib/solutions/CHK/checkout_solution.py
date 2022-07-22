@@ -23,7 +23,7 @@ def checkout(skus):
     }
     output = 0
     for item in skus:
-        if item not in items:
+        if item not in items or item.islower():
             print("illegal item found")
             output -= 1
         else:
@@ -37,5 +37,6 @@ def checkout(skus):
                 output -= items[item]["deal"]["saved"]
 
     return output
+
 
 

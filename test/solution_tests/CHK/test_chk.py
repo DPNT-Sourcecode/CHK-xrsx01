@@ -10,6 +10,8 @@ class TestCheckout:
         assert checkout_solution.checkout("AF") == 49
         assert checkout_solution.checkout("AAAAAAF") == 259
         assert checkout_solution.checkout("BABACAGA") == 45 + 130 + 20 - 1 + 50
+        assert checkout_solution.checkout("AxA") == 99
+
 
 
 
