@@ -12,8 +12,3 @@ class TestCheckout:
         # assert checkout_solution.checkout("BABACAGA") == 45 + 130 + 20 - 1 + 50
         assert checkout_solution.checkout("BABACAGA") == -1
         assert checkout_solution.checkout("AxA") == -1
-
-
-
-
-

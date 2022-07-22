@@ -45,8 +45,3 @@ def checkout(skus):
                 output -= items[item]["deal"]["saved"]
 
     return output
-
-
-
-
-
