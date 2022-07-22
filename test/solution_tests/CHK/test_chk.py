@@ -3,5 +3,6 @@ from solutions.CHK import checkout_solution
 
 
 class TestCheckout:
-    def test_sum(self):
-        assert checkout_solution.compute(1, 2) == 3
+    def test_sum_checkout(self):
+        assert checkout_solution.checkout("ABC") == 100
+

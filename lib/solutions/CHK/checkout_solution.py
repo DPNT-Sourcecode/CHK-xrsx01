@@ -23,5 +23,6 @@ def checkout(skus):
             "price": 15,
         },
     }
-    args = skus.split("")
+    shop_cart = skus.split("")
+
 
