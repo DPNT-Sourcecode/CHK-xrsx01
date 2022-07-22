@@ -18,6 +18,14 @@ def checkout(skus):
             },
             "count": 0,
         },
+        "E": {
+            "price": 40,
+            "deal": {
+                "amount": 2,
+                "saved": 40,
+            },
+            "count": 0,
+        },
         "C": {"price": 20, "count": 0},
         "D": {"price": 15, "count": 0},
     }
@@ -37,6 +45,7 @@ def checkout(skus):
                 output -= items[item]["deal"]["saved"]
 
     return output
+
 
 
 
