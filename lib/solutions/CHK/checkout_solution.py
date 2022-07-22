@@ -29,12 +29,13 @@ def checkout(skus):
         else:
             output += items[item]["price"]
             items[item]["count"] += 1
-        if (
-            "deal" in items[item]
-            and items[item]["count"] == items[item]["deal"]["amount"]
-        ):
-            items[item]["count"] = 0
-            output -= items[item]["deal"]["saved"]
+            if (
+                "deal" in items[item]
+                and items[item]["count"] == items[item]["deal"]["amount"]
+            ):
+                items[item]["count"] = 0
+                output -= items[item]["deal"]["saved"]
 
     return output
+
 
