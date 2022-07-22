@@ -30,11 +30,14 @@ def checkout(skus):
             output -= 1
         else:
             output += items[item]["price"]
-            items[item]["count"] = 0 if not items[item]["count"] else items[item]["count"] + 1
-            
+            items[item]["count"] = (
+                0 if not "count" in items[item] else items[item]["count"] + 1
+            )
+
             if items[item]["count"] == items[item]["deal"]["amount"]:
                 output -= items[item]["deal"]["saved"]
     return output
+
 
 
 
