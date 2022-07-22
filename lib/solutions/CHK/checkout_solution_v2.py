@@ -4,11 +4,18 @@ def checkout(skus):
     items = {
         "A": {
             "price": 50,
-            "deal": {
-                "amount": 3,
-                "saved": 20,
-            },
+            "deals": [
+                {
+                    "amount": 3,
+                    "saved": 20,
+                },
+                {
+                    "amount": 5,
+                    "saved": 50,
+                },
+            ],
             "count": 0,
+            "total_count": 0,
         },
         "B": {
             "price": 30,
@@ -45,3 +52,4 @@ def checkout(skus):
                 output -= items[item]["deal"]["saved"]
 
     return output
+
