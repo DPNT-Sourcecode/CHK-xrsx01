@@ -24,5 +24,3 @@ def checkout(skus):
         },
     }
     shop_cart = skus.split("")
-
-
