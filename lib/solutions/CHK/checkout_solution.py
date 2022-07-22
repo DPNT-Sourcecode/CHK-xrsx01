@@ -23,11 +23,16 @@ def checkout(skus):
             "price": 15,
         },
     }
-    shop_cart = skus.split("")
-    ordered_items = {}
-    ordered_items["illegal_items"] = 0
-    for item in shop_cart:
+    output = 0
+    for item in skus:
         if item not in items:
-            ordered_items["illegal_items"] += 1
-        ordered_items[item] = 0 if not ordered_items[item] else ordered_items[item] + 1
+            print("illegal item found")
+            output -= 1
+        else:
+            output += items["item"]["price"]
+            items["item"]["count"] = 0 if not items["count"] else items["count"] + 1
+            if items[item]["count"] == items[item]["deal"]["amount"]:
+                output -= items[item]["deal"]["saved"]
+    return output
+
 
