@@ -29,10 +29,12 @@ def checkout(skus):
             print("illegal item found")
             output -= 1
         else:
-            output += items["item"]["price"]
-            items["item"]["count"] = 0 if not items["count"] else items["count"] + 1
+            output += items[item]["price"]
+            items[item]["count"] = 0 if not items[item]["count"] else items[item]["count"] + 1
+            
             if items[item]["count"] == items[item]["deal"]["amount"]:
                 output -= items[item]["deal"]["saved"]
     return output
+
 
 
