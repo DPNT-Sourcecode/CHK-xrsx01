@@ -16,8 +16,5 @@ class TestSum:
 
     def test_sum_arg_out_of_bounds_upper(self):
         with pytest.raises(ValueError) as exc_info:
-            sum_solution.compute(3, 150)
+            sum_solution.compute(150, 3)
         assert "Argument out of bounds" in str(exc_info.value)
-
-
-
